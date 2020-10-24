@@ -2,7 +2,7 @@
 layout: home
 ---
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/hdevalke/convco/Build%20binary)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/convco/convco/Build%20binary)
 [![Crates.io](https://img.shields.io/crates/v/convco)](https://crates.io/crates/convco)
 
 A Conventional commit cli build with [Rust](https://www.rust-lang.org/).
@@ -20,14 +20,14 @@ It provides already the following commands:
 ## Installation
 
 Convco is build as a single binary. It does not need an additional runtime.
-[Shell completions](https://github.com/hdevalke/convco/releases/latest) are available for bash, zsh, elvish, fish and powershell.
+[Shell completions](https://github.com/convco/convco/releases/latest) are available for bash, zsh, elvish, fish and powershell.
 
 ### Ubuntu (x64)
 
-Download the latest [convco-deb.zip](https://github.com/hdevalke/convco/releases/latest/download/convco-deb.zip) file from the github releases.
+Download the latest [convco-deb.zip](https://github.com/convco/convco/releases/latest/download/convco-deb.zip) file from the github releases.
 
 ```sh
-curl -OL https://github.com/hdevalke/convco/releases/latest/download/convco-deb.zip
+curl -OL https://github.com/convco/convco/releases/latest/download/convco-deb.zip
 unzip convco-deb.zip
 sudo dpkg -i convco*.deb
 ```
@@ -37,23 +37,23 @@ sudo dpkg -i convco*.deb
 For macOS or Linux
 
 ```sh
-brew install hdevalke/formulae/convco
+brew install convco/formulae/convco
 ```
 
 ### Windows
 
-Download the latest [convco-windows.zip](https://github.com/hdevalke/convco/releases/latest/download/convco-windows.zip) zip file.
+Download the latest [convco-windows.zip](https://github.com/convco/convco/releases/latest/download/convco-windows.zip) zip file.
 Extract `convco.exe` into a folder in your `PATH`.
 
 ### Docker
 
-[![docker build status](https://img.shields.io/docker/cloud/build/hdevalke/convco)](https://hub.docker.com/r/hdevalke/convco)
-[![docker pulls](https://img.shields.io/docker/pulls/hdevalke/convco)](https://hub.docker.com/r/hdevalke/convco)
+[![docker build status](https://img.shields.io/docker/cloud/build/convco/convco)](https://hub.docker.com/r/convco/convco)
+[![docker pulls](https://img.shields.io/docker/pulls/convco/convco)](https://hub.docker.com/r/convco/convco)
 
 Mount the current work directory in a volume and run convco in it.
 
 ```sh
-docker run --rm -v "$PWD:/tmp" -w /tmp hdevalke/convco --help
+docker run --rm -v "$PWD:/tmp" -w /tmp convco/convco --help
 ```
 
 ### From source

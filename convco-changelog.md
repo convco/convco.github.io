@@ -14,7 +14,7 @@ The template language is [handlebars](https://handlebarsjs.com/).
 There should be at least 1 file `template.hbs`.
 All `*.hbs` files in the template directory will be loaded and are usable as [partials](https://handlebarsjs.com/guide/partials.html).
 
-The default template can be found [here](https://github.com/hdevalke/convco/tree/master/src/conventional/changelog).
+The default template can be found [here](https://github.com/convco/convco/tree/master/src/conventional/changelog).
 
 ## Examples
 
@@ -36,7 +36,7 @@ FLAGS:
     -V, --version    Prints version information
 
 OPTIONS:
-    -c, --config <config>    
+    -c, --config <config>
     -C <path>                Run as if convco was started in <path> instead of the current working directory
     -p, --prefix <prefix>    Prefix used in front of the semantic version [default: v]
 

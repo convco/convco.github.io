@@ -96,4 +96,4 @@ scopeRegex: "[[:alnum:]]+(?:[-_/][[:alnum:]]+)*"
 {% endraw %}
 
 [1]: https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.1.0/README.md
-[2]: https://github.com/hdevalke/convco/tree/master/src/conventional/changelog
+[2]: https://github.com/convco/convco/tree/master/src/conventional/changelog
