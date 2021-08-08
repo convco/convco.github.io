@@ -69,7 +69,7 @@ done
 ## Usage
 
 ```plain
-convco-check 0.3.1
+convco-check 0.3.6
 Verifies if all commits are conventional
 
 USAGE:
@@ -80,9 +80,11 @@ FLAGS:
     -V, --version    Prints version information
 
 OPTIONS:
-    -c, --config <config>    
-    -C <path>                Run as if convco was started in <path> instead of the current working directory
+    -c, --config <config>       
+    -n, --max-count <number>    Limit the number of commits to check
+    -C <path>                   Run as if convco was started in <path> instead of the current working directory
 
 ARGS:
-    <rev>     [default: HEAD]
+    <rev>    Start of the revwalk, can also be a commit range. Can be in the form `<commit>..<commit>` [default:
+             HEAD]
 ```
