@@ -37,8 +37,10 @@ FLAGS:
 
 OPTIONS:
     -c, --config <config>
-    -C <path>                Run as if convco was started in <path> instead of the current working directory
-    -p, --prefix <prefix>    Prefix used in front of the semantic version [default: v]
+    -C <path>                           Run as if convco was started in <path> instead of the current working directory
+    -m, --max-versions <MAX_VERSIONS>   Limits the number of version tags to add in the changelog
+    -p, --prefix <prefix>               Prefix used in front of the semantic version [default: v]
+    -s, --skip-empty                    Skip empty releases
 
 ARGS:
     <rev>     [default: HEAD]
