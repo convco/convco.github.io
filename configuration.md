@@ -7,7 +7,7 @@ permalink: /configuration/
 Configuration is based on the [conventional changelog config spec][1].
 
 The configuration must be specified in a `.versionrc` file in the root of the repository.
-YAML of JSON can be used to declare the configuration.
+YAML or JSON can be used to declare the configuration.
 `host`, `owner` and `repository` will not be looked up from `package.json` as `convco` is build tool agnostic.
 
 Additionally `scopeRegex` and `template` can be specified to restrict scopes or use a different template directory.
