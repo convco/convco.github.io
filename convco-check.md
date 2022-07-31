@@ -69,22 +69,23 @@ done
 ## Usage
 
 ```plain
-convco-check 0.3.6
+convco-check 
 Verifies if all commits are conventional
 
 USAGE:
-    convco check [OPTIONS] [rev]
-
-FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
-
-OPTIONS:
-    -c, --config <config>       
-    -n, --max-count <number>    Limit the number of commits to check
-    -C <path>                   Run as if convco was started in <path> instead of the current working directory
+    convco check [OPTIONS] [REV]
 
 ARGS:
-    <rev>    Start of the revwalk, can also be a commit range. Can be in the form `<commit>..<commit>` [default:
-             HEAD]
+    <REV>    Start of the revwalk, can also be a commit range. Can be in the form
+             `<commit>..<commit>` [default: HEAD]
+
+OPTIONS:
+    -c, --config <CONFIG>       
+    -C <PATH>                   Run as if convco was started in <path> instead of the current
+                                working directory
+        --first-parent          Follow only the first parent
+    -h, --help                  Print help information
+        --merges                Include conventional merge commits (commits with more than 1 parent)
+                                in the changelog
+    -n, --max-count <NUMBER>    Limit the number of commits to check
 ```
