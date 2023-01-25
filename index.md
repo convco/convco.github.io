@@ -2,7 +2,7 @@
 layout: home
 ---
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/convco/convco/Build%20binary)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/convco/convco/docker.yml)
 [![Crates.io](https://img.shields.io/crates/v/convco)](https://crates.io/crates/convco)
 
 A Conventional commit cli build with [Rust](https://www.rust-lang.org/).
