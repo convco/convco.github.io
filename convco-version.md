@@ -43,27 +43,22 @@ git tag v$(convco version --bump)
 ## Usage
 
 ```plain
-convco-version 
 Show the current version
 
-USAGE:
-    convco version [OPTIONS] [REV]
+Usage: convco version [OPTIONS] [REV]
 
-ARGS:
-    <REV>    Revision to show the version for [default: HEAD]
+Arguments:
+  [REV]  Revision to show the version for [default: HEAD]
 
-OPTIONS:
-    -b, --bump               Get the next version
-    -c, --config <CONFIG>    
-    -C <PATH>                Run as if convco was started in <path> instead of the current working
-                             directory
-    -h, --help               Print help information
-    -l, --label              Instead of printing out the bumped version, prints out one of: major,
-                             minor or patch
-        --major              Bump to a major release version, regardless of the conventional commits
-        --minor              Bump to a minor release version, regardless of the conventional commits
-    -p, --prefix <PREFIX>    Prefix used in front of the semantic version [default: v]
-    -P, --paths <PATHS>      Only commits that update those <paths> will be taken into account. It
-                             is useful to support monorepos
-        --patch              Bump to a patch release version, regardless of the conventional commits
+Options:
+  -C <PATH>              Run as if convco was started in <path> instead of the current working directory
+  -p, --prefix <PREFIX>  Prefix used in front of the semantic version [default: v]
+  -b, --bump             Get the next version
+  -c, --config <CONFIG>
+  -l, --label            Instead of printing out the bumped version, prints out one of: major, minor or patch
+      --major            Bump to a major release version, regardless of the conventional commits
+      --minor            Bump to a minor release version, regardless of the conventional commits
+      --patch            Bump to a patch release version, regardless of the conventional commits
+  -P, --paths <PATHS>    Only commits that update those <paths> will be taken into account. It is useful to support monorepos
+  -h, --help             Print help
 ```
