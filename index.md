@@ -37,7 +37,7 @@ sudo dpkg -i convco*.deb
 For macOS or Linux
 
 ```sh
-brew install convco/formulae/convco
+brew install convco
 ```
 
 ### Windows
