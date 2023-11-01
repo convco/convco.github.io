@@ -46,51 +46,60 @@ The commit, compare, issue and user url format can
 ```yaml
 # .versionrc
 ---
-header: "# Changelog\n\n"
+header: |
+  # Changelog
 types:
-  - type: feat
-    section: Features
-    hidden: false
-  - type: fix
-    section: Fixes
-    hidden: false
-  - type: build
-    section: Other
-    hidden: true
-  - type: chore
-    section: Other
-    hidden: true
-  - type: ci
-    section: Other
-    hidden: true
-  - type: docs
-    section: Documentation
-    hidden: true
-  - type: style
-    section: Other
-    hidden: true
-  - type: refactor
-    section: Other
-    hidden: true
-  - type: perf
-    section: Other
-    hidden: true
-  - type: test
-    section: Other
-    hidden: true
+- type: feat
+  section: Features
+  hidden: false
+- type: fix
+  section: Fixes
+  hidden: false
+- type: build
+  section: Other
+  hidden: true
+- type: chore
+  section: Other
+  hidden: true
+- type: ci
+  section: Other
+  hidden: true
+- type: docs
+  section: Documentation
+  hidden: true
+- type: style
+  section: Other
+  hidden: true
+- type: refactor
+  section: Other
+  hidden: true
+- type: perf
+  section: Other
+  hidden: true
+- type: test
+  section: Other
+  hidden: true
 preMajor: false
-commitUrlFormat: "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}"
-compareUrlFormat: "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}"
-issueUrlFormat: "{{host}}/{{owner}}/{{repository}}/issues/{{id}}"
-userUrlFormat: "{{host}}/{{user}}"
-releaseCommitMessageFormat: "chore(release): {{currentTag}}"
+commitUrlFormat: '{{@root.host}}/{{@root.owner}}/{{@root.repository}}/commit/{{hash}}'
+compareUrlFormat: '{{@root.host}}/{{@root.owner}}/{{@root.repository}}/compare/{{previousTag}}...{{currentTag}}'
+issueUrlFormat: '{{@root.host}}/{{@root.owner}}/{{@root.repository}}/issues/{{issue}}'
+userUrlFormat: '{{host}}/{{user}}'
+releaseCommitMessageFormat: 'chore(release): {{currentTag}}'
 issuePrefixes:
-  - "#"
-host: ~
-owner: ~
-repository: ~
-template: ~
-scopeRegex: "[[:alnum:]]+(?:[-_/][[:alnum:]]+)*"
+- '#'
+host: null
+owner: null
+repository: null
+template: null
+commitTemplate: null
+scopeRegex: '[[:alnum:]]+(?:[-_/][[:alnum:]]+)*'
+lineLength: 80
+wrapDisabled: false
+linkCompare: true
+linkReferences: true
+merges: false
+firstParent: false
+stripRegex: ''
 ```
 
 {% endraw %}
