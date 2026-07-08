@@ -5,11 +5,15 @@ permalink: /check/
 ---
 
 Check all commits or range for errors against the convention.
+It returns a non-zero exit code when any checked commit is not conventional.
 
 ## Examples
 
 ```sh
 convco check
+convco check origin/main..HEAD
+git log -1 --format=%B | convco check --from-stdin
+git log -1 --format=%B | convco check --from-stdin --strip
 ```
 
 Output:
@@ -66,6 +70,9 @@ while read old_sha new_sha _; do
 done
 ```
 
+Use `--ignore-message-pattern` to skip commits whose messages match a regex pattern.
+This can also be configured with `CONVCO_IGNORE_MESSAGE_PATTERN`.
+
 ## Usage
 
 ```plain
@@ -74,14 +81,27 @@ Verifies if all commits are conventional
 Usage: convco check [OPTIONS] [REV]
 
 Arguments:
-  [REV]  Start of the revwalk, can also be a commit range. Can be in the form `<commit>..<commit>`. If not provided and a tty it will check from HEAD. If not provided and not a tty it will check a single commit message from stdin
+  [REV]  Start of the revwalk, can also be a commit range. Can be in the form `<commit>..<commit>` [env: CONVCO_REV=]
 
 Options:
-  -C <PATH>                 Run as if convco was started in <path> instead of the current working directory
-  -n, --max-count <NUMBER>  Limit the number of commits to check
+  -C <PATH>
+          Run as if convco was started in <path> instead of the current working directory
+  -n, --max-count <NUMBER>
+          Limit the number of commits to check [env: CONVCO_MAX_COUNT=]
   -c, --config <CONFIG>
-      --merges              Include conventional merge commits (commits with more than 1 parent) in the changelog
-      --first-parent        Follow only the first parent
-      --ignore-reverts      Ignore commits created by `git revert` commands
-  -h, --help                Print help
+          [env: CONVCO_CONFIG=]
+      --merges
+          Include conventional merge commits (commits with more than 1 parent) in the changelog [env: CONVCO_MERGES=]
+      --first-parent
+          Follow only the first parent [env: CONVCO_FIRST_PARENT=]
+      --ignore-reverts
+          Ignore commits created by `git revert` commands [env: CONVCO_IGNORE_REVERTS=]
+      --ignore-message-pattern <IGNORE_MESSAGE_PATTERN>
+          Ignore commits whose message matches the given regex pattern [env: CONVCO_IGNORE_MESSAGE_PATTERN=]
+      --from-stdin
+          Read a single commit message from stdin
+      --strip
+          String comments and whitespace from commit message This is similar to `git commit --cleanup=strip`
+  -h, --help
+          Print help
 ```
